@@ -1,4 +1,4 @@
-// Import the assertEqual function (if it's not already available in this file)
+/* // Import the assertEqual function (if it's not already available in this file)
 const assertEqual = function(actual, expected) {
     if (actual === expected) {
       console.log(`✅ Assertion Passed: ${actual} === ${expected}`);
@@ -40,4 +40,15 @@ const assertEqual = function(actual, expected) {
 //✅ Assertion Passed: Labs === Labs
 //✅ Assertion Passed: 3 === 3
 //✅ Assertion Passed: 0 === 0
-//✅ Assertion Passed: 0 === 0
+//✅ Assertion Passed: 0 === 0 
+
+*/
+
+// tail.js
+
+const tail = function(array) {
+    // Implementation of tail function
+  };
+  
+  module.exports = tail;
+  

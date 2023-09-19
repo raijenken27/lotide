@@ -22,7 +22,7 @@ const assertEqual = function(actual, expected) {
   
     return results;
   };
-  
+  å
   // Test cases
   const firstNames = [
     "Karl",
