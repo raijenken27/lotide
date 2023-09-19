@@ -1,5 +1,5 @@
 
-function assertEqual(actual, expected) {
+/* function assertEqual(actual, expected) {
 
   }
   
@@ -30,3 +30,14 @@ function assertEqual(actual, expected) {
   
 
   console.log("All test cases passed!");
+
+  */
+
+  // eqArrays.js
+
+const eqArrays = function(array1, array2) {
+    // Implementation of eqArrays function
+  };
+  
+  module.exports = eqArrays; // Export the eqArrays function
+  
