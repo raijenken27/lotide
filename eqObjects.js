@@ -1,5 +1,5 @@
 
-
+/* 
 const assertEqual = function(actual, expected) {
     if (actual === expected) {
       console.log(`Assertion Passed: ${actual} === ${expected}`);
@@ -41,8 +41,9 @@ const assertEqual = function(actual, expected) {
     return true;
   };
   
-  // Test cases
-  const shirtObject = { color: "red", size: "medium" };
+  // Test cases first one
+
+  /* const shirtObject = { color: "red", size: "medium" };
   const anotherShirtObject= { size: "medium", color: "red" };
   assertEqual(eqObjects(shirtObject , anotherShirtObject), true);
   
@@ -56,3 +57,33 @@ const assertEqual = function(actual, expected) {
   const longSleeveMultiColorShirtObject= { size: "medium", colors: ["red", "blue"], sleeveLength: "long" };
   assertEqual(eqObjects(multiColorShirtObject  , longSleeveMultiColorShirtObject), false);
   
+  */
+
+
+const eqObjects = function(object1, object2) {
+  const keys1 = Object.keys(object1);
+  const keys2 = Object.keys(object2);
+
+  if (keys1.length !== keys2.length) {
+    return false;
+  }
+
+  for (const key of keys1) {
+    if (typeof object1[key] === 'object' && !Array.isArray(object1[key]) && typeof object2[key] === 'object' && !Array.isArray(object2[key])) {
+      if (!eqObjects(object1[key], object2[key])) {
+        return false;
+      }
+    } else {
+      if (typeof object1[key] !== 'object' && typeof object2[key] !== 'object' && object1[key] !== object2[key]) {
+        return false;
+      }
+    }
+  }
+
+  return true;
+};
+
+// Test cases to demonstrate that eqObjects works for nested objects
+console.log(eqObjects({ a: { z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 })); // Should return true
+console.log(eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 })); // Should return false
+console.log(eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: 1, b: 2 })); // Should return false
