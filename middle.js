@@ -1,14 +1,21 @@
-
-
-/*
-
-
 function assertArraysEqual(actual, expected) {
-    
+    if (eqArrays(actual, expected)) {
+      console.log(`✅✅✅ Assertion Passed: [${actual}] === [${expected}]`);
+    } else {
+      console.log(`🛑🛑🛑 Assertion Failed: [${actual}] !== [${expected}]`);
+    }
   }
   
   function eqArrays(array1, array2) {
-   
+    if (array1.length !== array2.length) {
+      return false;
+    }
+    for (let i = 0; i < array1.length; i++) {
+      if (array1[i] !== array2[i]) {
+        return false;
+      }
+    }
+    return true;
   }
   
   function middle(array) {
@@ -26,6 +33,7 @@ function assertArraysEqual(actual, expected) {
     }
   }
   
+  // Test cases
   assertArraysEqual(middle([1]), []);
   assertArraysEqual(middle([1, 2]), []);
   assertArraysEqual(middle([1, 2, 3]), [2]);
@@ -34,10 +42,9 @@ function assertArraysEqual(actual, expected) {
   assertArraysEqual(middle([1, 2, 3, 4, 5, 6]), [3, 4]);
   
   console.log("Test assertions completed!");
+  
 
-  */
-
-  // middle.js
+  /* middle.js
 
 const middle = function(array) {
     // Implementation of middle function
@@ -45,4 +52,4 @@ const middle = function(array) {
   
   module.exports = middle; // Export the middle function
   
-  
+  */
