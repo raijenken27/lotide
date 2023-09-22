@@ -1,4 +1,4 @@
-/* const assertEqual = function(actual, expected) {
+ const assertEqual = function(actual, expected) {
   if (actual === expected) {
     console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
   } else {
@@ -11,13 +11,14 @@ assertEqual(1, 1);  // Comparing identical numbers
 assertEqual("hello", "idk");  // Comparing non-identical strings
 assertEqual(111, 222);  // Comparing non-identical numbers
 
-module.exports = assertEqual; */
+module.exports = assertEqual; 
 
 // assertEqual.js
 
+/*
 const assertEqual = function(actual, expected) {
     // ...
   };
   
 module.exports = assertEqual; // Ensure this line is present
-  
+  */
