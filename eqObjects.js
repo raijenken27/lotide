@@ -1,5 +1,5 @@
 
-/* 
+
 const assertEqual = function(actual, expected) {
     if (actual === expected) {
       console.log(`Assertion Passed: ${actual} === ${expected}`);
@@ -43,7 +43,7 @@ const assertEqual = function(actual, expected) {
   
   // Test cases first one
 
-  /* const shirtObject = { color: "red", size: "medium" };
+  const shirtObject = { color: "red", size: "medium" };
   const anotherShirtObject= { size: "medium", color: "red" };
   assertEqual(eqObjects(shirtObject , anotherShirtObject), true);
   
@@ -57,7 +57,7 @@ const assertEqual = function(actual, expected) {
   const longSleeveMultiColorShirtObject= { size: "medium", colors: ["red", "blue"], sleeveLength: "long" };
   assertEqual(eqObjects(multiColorShirtObject  , longSleeveMultiColorShirtObject), false);
   
-  */
+  /*
 
 
 const eqObjects = function(object1, object2) {
@@ -87,3 +87,5 @@ const eqObjects = function(object1, object2) {
 console.log(eqObjects({ a: { z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 })); // Should return true
 console.log(eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 })); // Should return false
 console.log(eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: 1, b: 2 })); // Should return false
+
+*/
