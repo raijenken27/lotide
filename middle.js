@@ -1,4 +1,4 @@
-function assertArraysEqual(actual, expected) {
+/* function assertArraysEqual(actual, expected) {
     if (eqArrays(actual, expected)) {
       console.log(`✅✅✅ Assertion Passed: [${actual}] === [${expected}]`);
     } else {
@@ -43,13 +43,23 @@ function assertArraysEqual(actual, expected) {
   
   console.log("Test assertions completed!");
   
+  */
 
-  /* middle.js
+  // middle.js
 
 const middle = function(array) {
-    // Implementation of middle function
-  };
-  
-  module.exports = middle; // Export the middle function
-  
-  */
+  const length = array.length;
+  const middleIndex = Math.floor(length / 2);
+
+  if (length <= 2) {
+    return [];
+  }
+
+  if (length % 2 === 0) {
+    return [array[middleIndex - 1], array[middleIndex]];
+  } else {
+    return [array[middleIndex]];
+  }
+};
+
+module.exports = middle;
