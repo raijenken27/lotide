@@ -1,5 +1,5 @@
 
-const assertEqual = function(actual, expected) {
+ /* const assertEqual = function(actual, expected) {
     if (actual === expected) {
       console.log(`Assertion Passed: ${actual} === ${expected}`);
     } else {
@@ -22,7 +22,7 @@ const assertEqual = function(actual, expected) {
   
     return results;
   };
-  å
+
   // Test cases
   const firstNames = [
     "Karl",
@@ -44,4 +44,21 @@ const assertEqual = function(actual, expected) {
   assertEqual(result1["Agouhanna"], undefined);
   
   console.log("Test cases completed!");
+  
+  */
+  
+
+  const countOnly = function(allItems, itemsToCount) {
+    const results = {};
+  
+    for (const item of allItems) {
+      if (itemsToCount[item]) {
+        results[item] = (results[item] || 0) + 1;
+      }
+    }
+  
+    return results;
+  };
+
+  module.exports = countOnly;
   
