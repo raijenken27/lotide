@@ -1,5 +1,5 @@
 
-/* function assertEqual(actual, expected) {
+function assertEqual(actual, expected) {
 
   }
   
@@ -31,7 +31,6 @@
 
   console.log("All test cases passed!");
 
-  */
 
   // eqArrays.js
 
@@ -43,7 +42,7 @@
   
   */
 
-  const eqArrays = function(arr1, arr2) {
+ /* const eqArrays = function(arr1, arr2) {
     if (arr1.length !== arr2.length) {
       return false;
     }
@@ -67,4 +66,4 @@
   console.log(eqArrays([[2, 3], [4]], [[2, 3], [4]])); // Should return true
   console.log(eqArrays([[2, 3], [4]], [[2, 3], [4, 5]])); // Should return false
   console.log(eqArrays([[2, 3], [4]], [[2, 3], 4])); // Should return false
-  
+  */
