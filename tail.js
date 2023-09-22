@@ -45,9 +45,11 @@ const assertEqual = function(actual, expected) {
 */
 
 // tail.js
-
 const tail = function(array) {
-    // Implementation of tail function
+    if (array.length <= 1) {
+      return [];
+    }
+    return array.slice(1);
   };
   
   module.exports = tail;
