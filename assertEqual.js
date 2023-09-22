@@ -1,4 +1,6 @@
- const assertEqual = function(actual, expected) {
+ // Implement asserEqual
+ 
+ /* const assertEqual = function(actual, expected) {
   if (actual === expected) {
     console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
   } else {
@@ -12,6 +14,22 @@ assertEqual("hello", "idk");  // Comparing non-identical strings
 assertEqual(111, 222);  // Comparing non-identical numbers
 
 module.exports = assertEqual; 
+*/
+
+// Implementing (Template String to assertEqual)
+
+const assertEqual = function(actual, expected) {
+    if (actual === expected) {
+      console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
+    } else {
+      console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
+    }
+  };
+  
+  // Example usage
+  assertEqual("Lighthouse Labs", "Bootcamp"); // Non-identical strings
+  assertEqual(1, 1); // Identical numbers
+  
 
 // assertEqual.js
 
