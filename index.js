@@ -1,6 +1,4 @@
-
-
-// Exporting All Functions II
+// Implementing Object Shorthand
 
 const head = require('./head');
 const tail = require('./tail');

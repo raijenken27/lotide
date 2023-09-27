@@ -1,5 +1,5 @@
 
- /* const assertEqual = function(actual, expected) {
+ const assertEqual = function(actual, expected) {
     if (actual === expected) {
       console.log(`Assertion Passed: ${actual} === ${expected}`);
     } else {
@@ -45,7 +45,7 @@
   
   console.log("Test cases completed!");
   
-  */
+  /*
   
 
   const countOnly = function(allItems, itemsToCount) {
@@ -62,3 +62,4 @@
 
   module.exports = countOnly;
   
+  */

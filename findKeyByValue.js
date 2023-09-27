@@ -1,4 +1,4 @@
-// findKeyByValue.js
+/* // findKeyByValue.js
 
 const assertEqual = function(actual, expected) {
     if (actual === expected) {
@@ -31,4 +31,18 @@ const assertEqual = function(actual, expected) {
   assertEqual(findKeyByValue(bestTVShowsByGenre, "Brooklyn Nine-Nine"), "comedy");
   assertEqual(findKeyByValue({}, "The Wire"), undefined);
   assertEqual(findKeyByValue(bestTVShowsByGenre, "Friends"), undefined);
+  
+  */
+
+
+  const findKeyByValue = function(object, value) {
+    for (const key in object) {
+      if (object[key] === value) {
+        return key;
+      }
+    }
+    return undefined;
+  };
+  
+  module.exports = findKeyByValue;
   

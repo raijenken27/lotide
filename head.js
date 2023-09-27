@@ -19,11 +19,15 @@ const assertEqual = function(actual, expected) {
   assertEqual(head([]), undefined);
   assertEqual(head([42]), 42);
   
+
+
   console.log("Test assertions completed!");  
 
-/* head.js
+  module.exports = head;
 
-const assertEqual = require('./assertEqual');
+// head.js
+
+/* const assertEqual = require('./assertEqual');
 
 const head = function(arr) {
   if (arr && arr.length > 0) {
@@ -33,11 +37,5 @@ const head = function(arr) {
 };
 
 module.exports = head;
-
-// Test cases for head function
-assertEqual(head([5, 6, 7]), 5);
-assertEqual(head(['hello', 'world']), 'hello');
-assertEqual(head([]), undefined);
-assertEqual(head(undefined), undefined);
 
 */

@@ -1,4 +1,4 @@
-// Helper function to compare arrays for equality
+/* // Helper function to compare arrays for equality
 const eqArrays = function(arr1, arr2) {
     if (arr1.length !== arr2.length) {
       return false;
@@ -47,4 +47,25 @@ const eqArrays = function(arr1, arr2) {
   assertArraysEqual(result.e, [1]);
   assertArraysEqual(result.l, [2, 3]);
   assertArraysEqual(result.o, [4]);
+  
+  */
+
+  const letterPositions = function(sentence) {
+    const results = {};
+  
+    for (let i = 0; i < sentence.length; i++) {
+      const character = sentence[i].toLowerCase();
+  
+      if (character !== ' ') {
+        if (!results[character]) {
+          results[character] = [];
+        }
+        results[character].push(i);
+      }
+    }
+  
+    return results;
+  };
+  
+  module.exports = letterPositions;
   
