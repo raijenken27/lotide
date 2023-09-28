@@ -1,11 +1,11 @@
-const assert = require('chai').assert;
-const findKeyByValue = require('../findKeyByValue');
+const assertEqual = require('../assertEqual')
+const findKeyByValue = require('../findKeyByValue')
 
-describe('#findKeyByValue', () => {
-  it('should return "drama" for { sciFi: "fantasy", drama: "period" }, "period"', () => {
-    const inputObject = { sciFi: "fantasy", drama: "period" };
-    const searchValue = "period";
-    const expected = "drama";
-    assert.strictEqual(findKeyByValue(inputObject, searchValue), expected);
-  });
-});
+const bestTVShowsByGenre = {
+  sci_fi: 'The Expanse',
+  comedy: 'Brooklyn Nine-Nine',
+  drama: 'The Wire'
+}
+
+assertEqual(findKeyByValue(bestTVShowsByGenre, 'The Wire'), 'drama')
+assertEqual(findKeyByValue(bestTVShowsByGenre, "That '70s Show"), undefined)
