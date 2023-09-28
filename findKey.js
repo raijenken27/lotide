@@ -1,19 +1,19 @@
-const assertEqual = function (actual, expected) {
+const assertEqual = function(actual, expected) {
   if (actual === expected) {
-    console.log(`✅ Assertion Passed: ${actual} === ${expected}`)
+    console.log(`✅ Assertion Passed: ${actual} === ${expected}`);
   } else {
-    console.log(`🛑 Assertion Failed: ${actual} !== ${expected}`)
+    console.log(`🛑 Assertion Failed: ${actual} !== ${expected}`);
   }
-}
+};
 
-const findKey = function (object, callback) {
+const findKey = function(object, callback) {
   for (const key in object) {
     if (callback(object[key])) {
-      return key
+      return key;
     }
   }
-  return undefined
-}
+  return undefined;
+};
 
 // Test cases
 const restaurantRatings = {
@@ -23,15 +23,15 @@ const restaurantRatings = {
   elBulli: { stars: 3 },
   Ora: { stars: 2 },
   Akelarre: { stars: 3 }
-}
+};
 
-const result1 = findKey(restaurantRatings, x => x.stars === 2)
-assertEqual(result1, 'noma')
-const result2 = findKey(restaurantRatings, x => x.stars === 4)
-assertEqual(result2, undefined)
+const result1 = findKey(restaurantRatings, x => x.stars === 2);
+assertEqual(result1, 'noma');
+const result2 = findKey(restaurantRatings, x => x.stars === 4);
+assertEqual(result2, undefined);
 
-const result3 = findKey(restaurantRatings, x => x.stars === 1)
-assertEqual(result3, 'Blue Hill')
+const result3 = findKey(restaurantRatings, x => x.stars === 1);
+assertEqual(result3, 'Blue Hill');
 
-const result4 = findKey(restaurantRatings, x => x.stars === 3)
-assertEqual(result4, 'Akaleri')
+const result4 = findKey(restaurantRatings, x => x.stars === 3);
+assertEqual(result4, 'Akaleri');

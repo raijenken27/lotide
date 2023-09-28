@@ -1,10 +1,10 @@
-const findKeyByValue = function (object, value) {
+const findKeyByValue = function(object, value) {
   for (const key in object) {
     if (object[key] === value) {
-      return key
+      return key;
     }
   }
-  return undefined
-}
+  return undefined;
+};
 
-module.exports = findKeyByValue
+module.exports = findKeyByValue;

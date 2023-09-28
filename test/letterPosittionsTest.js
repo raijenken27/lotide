@@ -1,9 +1,9 @@
-const assertArraysEqual = require('../assertArraysEqual')
-const letterPositions = require('../letterPositions')
+const assertArraysEqual = require('../assertArraysEqual');
+const letterPositions = require('../letterPositions');
 
 // Test cases
-const result = letterPositions('hello')
-assertArraysEqual(result.h, [0])
-assertArraysEqual(result.e, [1])
-assertArraysEqual(result.l, [2, 3])
-assertArraysEqual(result.o, [4])
+const result = letterPositions('hello');
+assertArraysEqual(result.h, [0]);
+assertArraysEqual(result.e, [1]);
+assertArraysEqual(result.l, [2, 3]);
+assertArraysEqual(result.o, [4]);
