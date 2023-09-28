@@ -44,22 +44,3 @@
   assertEqual(result1["Agouhanna"], undefined);
   
   console.log("Test cases completed!");
-  
-  /*
-  
-
-  const countOnly = function(allItems, itemsToCount) {
-    const results = {};
-  
-    for (const item of allItems) {
-      if (itemsToCount[item]) {
-        results[item] = (results[item] || 0) + 1;
-      }
-    }
-  
-    return results;
-  };
-
-  module.exports = countOnly;
-  
-  */
