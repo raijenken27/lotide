@@ -1,30 +1,15 @@
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
+const countLetters = function(string) {
+  let cleanedString = string.split(" ").join('');
+  let results = {};
 
-const countLetters = function(sentence) {
-  const result = {};
-
-  for (const letter of sentence) {
-    if (letter !== ' ') {
-      if (result[letter]) {
-        result[letter] += 1;
-      } else {
-        result[letter] = 1;
-      }
-    }
+  // Iterate through each letter in the cleaned string.
+  for (let letter of cleanedString) {
+    // Check if the letter exists as a key in 'results'.
+    // If it does, increment its count; otherwise, initialize it with a count of 1.
+    results[letter] ? results[letter] += 1 : results[letter] = 1;
   }
 
-  return result;
+  return results;
 };
 
-// Test cases
-const result = countLetters('LHL');
-assertEqual(result.L, 2);
-assertEqual(result.H, 1);
-
-console.log('Test cases completed!');
+module.exports = countLetters;
