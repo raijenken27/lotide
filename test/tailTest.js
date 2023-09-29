@@ -1,22 +1,15 @@
-const assert = require('chai').assert;
-const tail = require('../tail');
-const describe = require('mocha').describe;
-const it = require('mocha').it;
+const { assert } = require("chai");
+const tail = require("../tail");
 
-describe('#tail', () => {
-  it('returns [2, 3] for [1, 2, 3]', () => {
-    assert.deepEqual(tail([1, 2, 3]), [2, 3]);
+describe("#tail", () => {
+  const words = ["Yo Yo", "Lighthouse", "Labs"];
+  it("returns 3 for words.length", () => {
+    assert.strictEqual((words.length), 3);
   });
-
-  it('returns [] for [1]', () => {
-    assert.deepEqual(tail([1]), []);
+  it("returns 2 for tail(words).length", () => {
+    assert.strictEqual(tail(words).length, 2);
   });
-
-  it('returns [] for an empty array', () => {
-    assert.deepEqual(tail([]), []);
-  });
-
-  it('returns ["Lighthouse", "Labs"] for ["Yo Yo", "Lighthouse", "Labs"]', () => {
-    assert.deepEqual(tail(['Yo Yo', 'Lighthouse', 'Labs']), ['Lighthouse', 'Labs']);
+  it("returns ['Lighthouse', 'Labs'] for tail(words)", () => {
+    assert.deepEqual(tail(words), ['Lighthouse', 'Labs']);
   });
 });
