@@ -1,16 +1,17 @@
 const letterPositions = function(sentence) {
-  const results = {};
-  for (let i = 0; i < sentence.length; i++) {
-    const char = sentence[i];
-    if (char !== ' ') {
-      if (!results[char]) {
-        results[char] = [i];
-      } else {
-        results[char].push(i);
-      }
+  let cleanedSentence = sentence.split('');
+  let results = {};
+
+  // Iterate through each character (letter) and its index in the cleaned sentence.
+  cleanedSentence.forEach(function(letter, index) {
+    // Exclude spaces (non-letter characters) from consideration.
+    if (letter !== " ") {
+      results[letter] ? results[letter].push(index) : results[letter] = [index];
     }
-  }
+  });
+
   return results;
 };
 
 module.exports = letterPositions;
+
