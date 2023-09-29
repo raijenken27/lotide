@@ -1,15 +1,15 @@
-const flatten = function(arr) {
-  const flattenedArray = [];
-  for (const element of arr) {
+const flatten = function(array) {
+  let newArray = [];
+  array.forEach(function(element) {
     if (Array.isArray(element)) {
-      for (const innerElement of element) {
-        flattenedArray.push(innerElement);
-      }
+      element.forEach(function(element2) {
+        newArray.push(element2);
+      });
     } else {
-      flattenedArray.push(element);
+      newArray.push(element);
     }
-  }
-  return flattenedArray;
+  });
+  return newArray;
 };
 
 module.exports = flatten;
