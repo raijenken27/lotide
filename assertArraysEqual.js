@@ -15,8 +15,6 @@ const assertArraysEqual = function(array1, array2) {
   } else {
     result += `🔴 Assertion Failed: [${array1}] is not equal to [${array2}]`;
   }
-
-  // Display the result message.
   console.log(result);
 };
 
